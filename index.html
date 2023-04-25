@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Di Lixão - Conceição Evaristo</title>
+    <style>
+      /* Estilo para o cabeçalho */
+      header {
+        background-color: #f2b632;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        text-shadow: 2px 2px #1e1e1e;
+      }
+      
+      /* Estilo para os parágrafos */
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: justify;
+        margin: 20px;
+        color: white;
+      }
+      
+      /* Estilo para o botão */
+      button {
+        background-color: #1e1e1e;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      /* Efeito hover para o botão */
+      button:hover {
+        background-color: #f2b632;
+      }
+      
+      /* Estilo para o fundo do body */
+      body {
+        background-image: url('https://media.discordapp.net/attachments/1100322346448986122/1100323126073626695/Saas_imagem_de_lixo_ou_de_uma_pessoa_vivendo_em_condicoes_preca_cf71cb71-9261-4b82-9b75-22bd3792332b.png?width=662&height=662');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      
+      /* Estilo para o efeito de parallax */
+      .parallax {
+        height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      /* Estilo para o texto do efeito de parallax */
+      .parallax h2 {
+        font-size: 40px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px #1e1e1e;
+      }
+      
+      /* Estilo para o botão de rolagem suave */
+      .scroll-down {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+        opacity: 0.5;
+        animation: moveUpDown 1.5s ease-in-out infinite;
+      }
+      
+      /* Efeito de animação para o botão de rolagem suave */
+      @keyframes moveUpDown {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(10px);
+        }
+      }
+      
+      /* Estilo para o ícone do botão de rolagem suave */
+      .scroll-down i {
+        color: white;
+        font-size: 30px;
+      }
+      
+            /* Estilo para o botão do podcast */
+      #podcast-button {
+        display: block;
+        margin: 40px auto;
+        background-color: #f2b632;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      /* Efeito hover para o botão do podcast */
+      #podcast-button:hover {
+        background-color: #1e1e1e;
+      }
+	  
+	        /* Estilo para o áudio */
+      audio {
+        display: block;
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 80%;
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Olhos D'Água - Di Lixão</header>
+    
+    <p>Di Lixão era um homem que vivia entre o lixo e os ratos. Ele era conhecido no bairro como um sujeito perigoso e violento. Mas nem todos sabiam que, por trás da aparência assustadora, Di Lixão escondia uma história triste e dolorosa.</p>
+    <p>Conceição Evaristo narra a vida de Di Lixão de uma forma poética e comovente. Ela nos mostra como a exclusão social pode levar uma pessoa ao abismo e como a falta de oportunidades pode transformar um ser humano em um "monstro" aos olhos da sociedade.</p>
+    <p>O conto nos faz refletir sobre a importância da empatia e da solidariedade, e nos mostra que é possível encontrar beleza mesmo em meio à sujeira e ao caos.</p>
+    <button id="comprar-livro">Compre o Livro</button>
+    
+    <div class="parallax" style="background-image: url('https://media.discordapp.net/attachments/1100322346448986122/1100324312239583253/Saas_Imagens_abstratas_como_uma_textura_ou_padrao_para_criar_um_2d3fc5f0-4202-426d-8296-922a235e4178.png?width=662&height=662');">
+      <h2>Leia o livro que inspirou o conto</h2>
+      <div class="scroll-down">
+        <a href="#conteudo">
+          <i class="fa fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div id="conteudo">
+      <p>Se você ainda não leu "Di Lixão", não perca a oportunidade de se emocionar com essa história incrível!</p>
+      <p>O livro "Olhos D'Água" conta com vários contos emocionantes e impactantes, que exploram as vivências de mulheres negras e periféricas no Brasil. Escrito por Conceição Evaristo, o livro é um marco da literatura afro-brasileira e deve ser lido por todas as pessoas interessadas em entender e valorizar a diversidade cultural do nosso país.</p>
+      <p>Para adquirir o livro, basta clicar no botão abaixo:</p>
+      <button id="comprar-livro2">Compre o Livro</button>
+      <a href="https://murf.ai/share/lgvvw19p" target="_blank"><button id="podcast-button">Ouça o podcast de Olhos D'Água</button></a>
+    </div>
+    
+    <script>
+      // Efeito de digitação para o cabeçalho
+      var header = document.querySelector('header');
+      var text = header.textContent;
+      header.textContent = '';
+      var i = 0;
+      function typing() {
+        if (i < text.length) {
+          header.textContent          += text.charAt(i);
+          i++;
+          setTimeout(typing, 50);
+        }
+      }
+      typing();
+      
+      // Função para redirecionar para a página de compra do livro
+      var comprarLivro = document.getElementById("comprar-livro");
+      comprarLivro.addEventListener("click", function() {
+        var url = "https://www.amazon.com.br/Olhos-D%C3%81gua-Concei%C3%A7ao-Evaristo/dp/8534705259";
+        window.open(url, "_blank");
+      });
+      
+      // Função para rolar suavemente para a seção de conteúdo
+      var scrollDown = document.querySelector('.scroll-down');
+      scrollDown.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector('#conteudo');
+        var targetPosition = target.getBoundingClientRect().top;
+        var startPosition = window.pageYOffset;
+        var distance = targetPosition - startPosition;
+        var duration = 1000;
+        var start = null;
+        
+        window.requestAnimationFrame(step);
+        function step(timestamp) {
+          if (!start) start = timestamp;
+          var progress = timestamp - start;
+          window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+          if (progress < duration) window.requestAnimationFrame(step);
+        }
+      });
+      
+      // Função para redirecionar para a página de compra do livro (segundo botão)
+      var comprarLivro2 = document.getElementById("comprar-livro2");
+      comprarLivro2.addEventListener("click", function() {
+        var url = "https://www.amazon.com.br/Olhos-D%C3%81gua-Concei%C3%A7ao-Evaristo/dp/8534705259";
+        window.open(url, "_blank");
+      });
+      
+      // Função para calcular a posição de rolagem suave
+      function easeInOutQuad(t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t + b;
+        t--;
+        return -c/2 * (t*(t-2) - 1) + b;
+      };
+    </script>
+	<video controls>
+  <source src="Podcast Olhos D'Água.mp4" type="video/mp4" >
+  Seu navegador não suporta a tag de vídeo.
+</video>
+
+  </body>
+</html>
+
+
+
+
+
